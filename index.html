@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Country Information Finder</title>
+  <link rel="stylesheet" href="nagger.css" />
+  <script defer src="nagger.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Country Information Finder</h1>
+      <button id="themeToggle" class="theme-toggle" title="Toggle Theme">🌙</button>
+    </div>
+
+    <div class="input-group">
+      <input type="text" id="countryInput" placeholder="Enter country name" />
+      <button onclick="clearInput()" class="clear-btn">Clear</button>
+      <button onclick="getCountryInfo()">Get Info</button>
+    </div>
+
+    <div id="recentSearches" class="recent-searches">
+      <h3>Recent Searches</h3>
+      <ul id="recentList"></ul>
+      <button onclick="clearRecentSearches()" class="clear-history-btn">Clear Search History</button>
+    </div>
+
+    <div id="result" class="result-container"></div>
+
+    <div id="nagger" class="nagger" style="display: none;">
+      <p>Discover more countries! Try searching for another one.</p>
+      <button onclick="dismissNagger()">Dismiss</button>
+    </div>
+  </div>
+</body>
+</html>
